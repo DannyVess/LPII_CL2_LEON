@@ -81,4 +81,13 @@ public class TblProveedorcl2 implements Serializable {
 		this.rucproveecl2 = rucproveecl2;
 	}
 
+	@Override
+	public String toString() {
+		return "TblProveedorcl2 [idprooveedorcl2=" + idprooveedorcl2 + ", emailproveecl2=" + emailproveecl2
+				+ ", feingproveecl2=" + feingproveecl2 + ", nomproveecl2=" + nomproveecl2 + ", rsocialproveecl2="
+				+ rsocialproveecl2 + ", rucproveecl2=" + rucproveecl2 + "]";
+	}
+	
+	
+
 }

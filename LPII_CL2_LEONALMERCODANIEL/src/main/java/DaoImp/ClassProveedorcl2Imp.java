@@ -23,7 +23,7 @@ public class ClassProveedorcl2Imp implements IProveedorcl2 {
 			//registramos
 			em.persist(tblproveedor);
 			//emitimos mensaje por pantalla....
-			System.out.println("Producto registrado en BD correctamente!!!!!!!!");
+			System.out.println("Proveedor registrado en BD correctamente!!!!!!!!");
 			//confirmamos
 			em.getTransaction().commit();
 			//cerramos la transaccion...
@@ -56,9 +56,9 @@ public class ClassProveedorcl2Imp implements IProveedorcl2 {
 				//iniciamos la transaccion...
 				em.getTransaction().begin();
 				//recuperar el codigo a eliminar...
-				TblProveedorcl2 tblprod=em.merge(tblproveedor);
+				TblProveedorcl2 tblprov=em.merge(tblproveedor);
 				//procedemos a eliminar
-				em.remove(tblprod);
+				em.remove(tblprov);
 				System.out.println("dato eliminado");
 				em.getTransaction().commit();
 				em.close();	
@@ -84,19 +84,19 @@ public class ClassProveedorcl2Imp implements IProveedorcl2 {
 
 	public TblProveedorcl2 BuscarProveedorcl2(TblProveedorcl2 tblproveedor) {
 		// establecemos conexion con la unidad de persistencia...
-				EntityManagerFactory emf=Persistence.createEntityManagerFactory("ProyectoEAJPAMaven2025");
+				EntityManagerFactory emf=Persistence.createEntityManagerFactory("LPII_CL2_LEONALMERCODANIEL");
 				//para administrar la transacciones
 				EntityManager em=emf.createEntityManager();
 				//iniciamos la transaccion...
 				em.getTransaction().begin();
 				//recuperamos el codigo a buscar...
-				TblProveedorcl2 tblprod=em.find(TblProveedorcl2.class,tblproveedor.getIdprooveedorcl2());
+				TblProveedorcl2 tblprov=em.find(TblProveedorcl2.class,tblproveedor.getIdprooveedorcl2());
 				//confirmamos la transaccion
 				em.getTransaction().commit();
 				//cerramos la transaccion.
 				em.close();
 				//retornamos el registro solicitado..
-				return tblprod;
+				return tblprov;
 	}
 
 }

@@ -29,18 +29,20 @@ public class ControladorLogueo extends HttpServlet {
 		
 		
 		
-		
-	}
+	}   //fin del metodo doget...
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//doGet(request, response);
-		//fin del metodo doget...
-		//redireccionamos
-				request.getRequestDispatcher("MenuPrincipal.jsp").forward(request,response);
-	}
+	//	doGet(request, response);
+		          //validar datos....
+		
+		           //redireccionamos
+		System.out.println("11111111111111111111111111");
+				request.getRequestDispatcher("/MenuPrincipal.jsp").forward(request, response);
+				System.out.println("2222222222222222222222222222");
+	} //fin del metodo dopost...
 
 }

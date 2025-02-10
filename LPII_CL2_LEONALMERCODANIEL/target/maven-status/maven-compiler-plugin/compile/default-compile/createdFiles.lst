@@ -1,0 +1,9 @@
+Controlador\ControladorLogueo.class
+Model\TblUsuariocl2_.class
+Controlador\ControladorProveedor.class
+TestEntidades\testEntidadProveedorcl2.class
+Model\TblProveedorcl2_.class
+Model\TblUsuariocl2.class
+Interfaces\IProveedorcl2.class
+DaoImp\ClassProveedorcl2Imp.class
+Model\TblProveedorcl2.class
